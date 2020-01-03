@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>David Mars Photography</title>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "photography website">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name = "view port" content = "width = device-width,initial-scale = 1">
+		<link href="photoprojects.css" type="text/css" rel="stylesheet"/>
+		
+	</head>
+	<body>
+		<div id="showcase">
+			<header>
+				<a class="name" href="photography.html">David Mars <br/>Photography</a>
+				<button  class="menubtn">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</button>
+				<nav class="navbar">
+					<ul class="menu-list">
+						<a class="link" href = "photoprojects.html" >
+							<li>My Portfolio</li>
+						</a>
+						<a class="link" href = "photoabout.html" >
+							<li>About Me</li>
+						</a>
+						<a class="link" href = "photocontact.html" >
+							<li>Contact Me</li>
+						</a>
+						<h3>Collections</h3>
+						<a class="collection"  href = "photoprojects.html#city" >
+							<li>City</li>
+						</a>
+						<a class="collection"  href = "photoprojects.html#people" >
+							<li>People</li>
+						</a>
+						<a class="collection"  href = "photoprojects.html#landscape" >
+							<li>Landscape</li>
+						</a>
+						<a class="collection"  href = "photoprojects.html#wildlife" >
+							<li>Wildlife</li>
+						</a>
+					</ul>
+				</nav>
+			</header>
+			<div id="infocard">
+				<h1>
+					<a class="name" href="photography.html">David Mars <br/>Photography</a>
+				</h1>
+				<ul>
+					<li>
+						<a href = "photoprojects.html#city" >City</a>
+					</li>
+					<li>
+						<a href = "photoprojects.html#people" >People</a>
+					</li>
+					<li>
+						<a href = "photoprojects.html#landscape" >Landscape</a>
+					</li>
+					<li>
+						<a href = "photoprojects.html#wildlife" >Wildlife</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<a href = "photoprojects.html" >
+						<li>My Portfolio</li>
+					</a>
+					<a href = "photoabout.html" >
+						<li>About Me</li>
+					</a>
+					<a href = "photocontact.html" >
+						<li>Contact Me</li>
+					</a>
+				</ul>
+				
+			</div>
+		</div>
+		<main>
+			<article id="city">
+				<h1>City</h1>
+				<br/>
+				<img src = "images/wanderer.jpg"/>
+				<img src = "images/market.jpg"/>
+				<img src = "images/sunset-city.jpg"/>
+				<img src = "images/nairobi.jpg"/>
+				<img src = "images/buildings-city.jpg"/>
+				<img src = "images/dubai.jpg"/>
+				<img src = "images/city-night-lights.jpg"/>
+				<img src = "images/nairobi streets.jpg"/>
+			</article>
+			
+			<article id="people">
+				<h1>People</h1>
+				<br/>
+				<img src = "images/african women.jpg"/>
+				<img src = "images/modern-maasai-youth.jpg"/>
+				<img src = "images/working woman.jpg"/>
+				<img src = "images/businessman.jpg"/>
+				<img src = "images/child.jpg"/>
+				<img src = "images/school kids.jpg"/>
+				<img src = "images/african-beauty-lg.jpg"/>
+				<img src = "images/yellow-dress-girl.jpg"/>
+			</article>
+			<article id="landscape">
+				<h1>Landscape</h1>
+				<br/>
+				<img src = "images/road-hill.jpg"/>
+				<img src = "images/mombasa-coast.jpg"/>
+				<img src = "images/african sunrise.jpg"/>
+				<img src = "images/aerial-shot-hills.jpg"/>
+				<img src = "images/mountain-daylight.jpg"/>
+				<img src = "images/countryside.jpg"/>
+				<img src = "images/astronomy-beautiful.jpg"/>
+				<img src = "images/night-farm-mountain-sqr.jpg"/>
+			</article>
+			<article id="wildlife">
+				<h1>Wildlife</h1>
+				<br/>
+				<img src = "images/lioness.jpg"/>
+				<img src = "images/elephants-mountain.jpg"/>
+				<img src = "images/girraffe-sunset.jpg"/>
+				<img src = "images/waterhole-sunset.jpg"/>
+				<img src = "images/cheetah.jpg"/>
+				<img src = "images/zebras.jpg"/>
+				<img src = "images/girraffe-hill.jpg"/>
+				<img src = "images/lilac breasted roller.jpg"/>
+			</article>
+			<footer class="floating" id = "foot">
+				<!--copyright,trademark and location-->
+				<p>Address  |  myemail@gmail.com  <br/> &copy 2019 David Mars Photography<p>
+			</footer>
+		</main>
+	</body>
+</html>
+<script>
+	const btn=document.querySelector('.menubtn')
+	const links=document.querySelector('.menu-list')
+	
+	btn.addEventListener('click',function() {
+		let value = links.classList.contains('navbar_collapse')
+		
+		if (value){links.classList.remove('navbar_collapse')
+				   btn.classList.remove('change')
+		}
+		else{links.classList.add('navbar_collapse')
+			 btn.classList.add('change')
+		}
+		})
+	var i=0;
+	function drop(name){
+		
+		if (i!=0){
+			document.getElementById(name).style.display="none";
+			i=0;
+			}
+		else{document.getElementById(name).style.display="block";
+			 i++;}
+		}
+	
+</script>

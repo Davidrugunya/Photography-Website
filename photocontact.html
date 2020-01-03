@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>David Mars Photography</title>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "photography website">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name = "view port" content = "width = device-width,initial-scale = 1">
+		<link href="photocontact.css" type="text/css" rel="stylesheet"/>
+		
+	</head>
+	<body>
+		<div id="showcase">
+			<header>
+				<a class="name" href="photography.html">David Mars <br/>Photography</a>
+				<button  class="menubtn">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</button>
+				<nav class="navbar">
+					<ul class="menu-list">
+						<a class="link" href = "photoprojects.html" >
+							<li>My Portfolio</li>
+						</a>
+						<a class="link" href = "photoabout.html" >
+							<li>About Me</li>
+						</a>
+						<a class="link" href = "photocontact.html" >
+							<li>Contact Me</li>
+						</a>
+					</ul>
+				</nav>
+			</header>
+			
+			<article id="contact-form">
+				<section class="floating">
+					<h1>WRITE ME</h1>
+					<br/>
+					<h3>Your Name :</h3><input class="form" id="firstname" type = "text" required>
+					<h3>Email Address :</h3><input class="form" id="email" type = "email" required>
+					<h3>Message :</h3>
+					<textarea ></textarea><br/>
+					<button class="click">SEND MESSAGE</button>
+				</section>
+				<section>
+					<h1>CONTACT INFO</h1>
+					<br/>
+					<h3>MY EMAIL</h3>
+					<h2>davidrugunyag@gmail.com</h2>
+					<h3>CALL ME</h3>
+					<h2>310-743-3190</h2>
+					<!--links to social media-->
+					<span id = "links">
+						<a href="https://m.facebook.com/home.php?">
+							<button>
+								<img src = "images/facebook.png"/>
+							</button>
+						</a>
+						<a href="https://www.twitter.com/">
+							<button>
+								<img src = "images/twitter.png"/>
+							</button>
+						</a>
+						<a href="https://www.instagram.com">
+							<button>
+								<img src = "images/instagram.png"/>
+							</button>
+						</a>
+						<a href="https://www.youtube.com">
+							<button>
+								<img src = "images/youtube.png"/>
+							</button>
+						</a>
+					</span>
+				</section>
+				<footer class="floating" id = "foot">
+					<!--copyright,trademark and location-->
+					<p>Address  |  myemail@gmail.com  <br/> &copy 2019 David Mars Photography<p>
+				</footer>
+			</article>
+		</div>
+	</body>
+
+</html>
+<script>
+	const btn=document.querySelector('.menubtn')
+	const links=document.querySelector('.menu-list')
+	
+	btn.addEventListener('click',function() {
+		let value = links.classList.contains('navbar_collapse')
+		
+		if (value){links.classList.remove('navbar_collapse')
+				   btn.classList.remove('change')
+		}
+		else{links.classList.add('navbar_collapse')
+			 btn.classList.add('change')
+		}
+		})
+	var i=0;
+	function drop(name){
+		
+		if (i!=0){
+			document.getElementById(name).style.display="none";
+			i=0;
+			}
+		else{document.getElementById(name).style.display="block";
+			 i++;}
+		}
+	
+</script>
