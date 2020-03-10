@@ -76,42 +76,49 @@ body{
 	display:none;
 }
 
-#links{display:block;
+#social{display:block;
 	   padding:0px;
 	   position:relative;
 	   align-self:center;
 	   margin:0px;}
-#links a{text-decoration:none;
-	     padding:0px;}
-#links button{
-	width:60px;
-	height:60px;
-	background:white;
+#social a{
+	text-decoration:none;
+	padding:0px !important;
+	margin:0px !important;
+	background:transparent;
+}
+
+#social button{
+	width:50px;
+	height:50px;
+	background:transparent;
 	border-radius:50%;
-	border:solid 0px;
-	padding:0px;
-	margin:0 !important;
+	padding:0 0 !important;
+	margin:5px 0 !important;
 	align-items:center;
+	border:none;
 	}
 
-#links img{
-	width:100%;
+#social img{
+	width:110%;
 	margin:0;
 	padding:0;
 }
-#foot{
+#social button:hover{
+	transform:scale(1.2,1.2);
+}
+
+footer{
 	background:rgba(0,0,0,0.2);
 	display:block;
 	width:100%;
 	text-align:center;
-	padding:0px;
-	font-size:12px;
+	padding-top:3px;
 	margin:0px;
 	z-index:3;
 }
-
-#foot p{
-	font:bold 15px arial;
+footer p{
+	font:bold 16px arial;
 	color:white;
 	line-height:1.6;
 	padding:0.3em;
